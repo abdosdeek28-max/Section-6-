@@ -1,129 +1,48 @@
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-}
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
 
-html {
-  scroll-behavior: smooth;
-}
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="theme-color" content="#060816">
 
-body {
-  font-family: "Cairo", sans-serif;
-  background: #070b17;
-  color: #ffffff;
-  min-height: 100vh;
-  overflow-x: hidden;
-}
+  <title>منصة الطالب الهندسي</title>
 
-/* الخلفية */
-.background {
-  position: fixed;
-  inset: 0;
-  z-index: -1;
-  pointer-events: none;
-  background:
-    radial-gradient(circle at 90% 10%, rgba(91,92,255,.18), transparent 30%),
-    radial-gradient(circle at 10% 90%, rgba(0,217,255,.12), transparent 30%);
-}
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Cairo:wght@400;600;700;800;900&display=swap');
 
-/* إلغاء الـ blobs القديمة */
-.blob {
-  display: none;
-}
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
 
-/* Navbar */
-nav {
-  width: 100%;
-  position: sticky;
-  top: 0;
-  z-index: 1000;
-  background: #0b1020;
-  border-bottom: 1px solid #20283b;
-}
+    html {
+      scroll-behavior: smooth;
+    }
 
-.nav-container {
-  width: min(1150px, 92%);
-  margin: auto;
-  min-height: 72px;
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  gap: 20px;
-}
+    body {
+      font-family: "Cairo", Arial, sans-serif;
+      background: #060816;
+      color: #ffffff;
+      min-height: 100vh;
+      overflow-x: hidden;
+    }
 
-.logo {
-  display: flex;
-  align-items: center;
-  gap: 12px;
-  font-weight: 900;
-  font-size: 1.15rem;
-}
+    a {
+      text-decoration: none;
+    }
 
-.logo-icon {
-  width: 43px;
-  height: 43px;
-  display: grid;
-  place-items: center;
-  border-radius: 13px;
-  background: linear-gradient(135deg, #5b5cff, #00cfff);
-}
+    /* =========================
+       BACKGROUND
+    ========================= */
 
-.nav-link {
-  color: #c9d0e3;
-  text-decoration: none;
-  font-weight: 700;
-}
+    body::before {
+      content: "";
+      position: fixed;
+      inset: 0;
+      z-index: -2;
 
-/* Hero */
-.hero {
-  width: min(1150px, 92%);
-  min-height: 500px;
-  margin: auto;
-  padding: 80px 0 50px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  text-align: center;
-}
-
-.hero-content {
-  max-width: 850px;
-}
-
-.badge {
-  display: inline-flex;
-  align-items: center;
-  gap: 8px;
-  padding: 8px 17px;
-  margin-bottom: 25px;
-  border-radius: 100px;
-  background: #151b35;
-  border: 1px solid #303c70;
-  color: #bfc8ff;
-}
-
-.hero h1 {
-  font-size: clamp(2.3rem, 7vw, 5rem);
-  line-height: 1.25;
-  font-weight: 900;
-  margin-bottom: 20px;
-}
-
-.gradient-text {
-  background: linear-gradient(90deg, #9b9cff, #4ddfff, #87f5cf);
-  -webkit-background-clip: text;
-  background-clip: text;
-  color: transparent;
-}
-
-.hero p {
-  color: #aab3c7;
-  font-size: 1.1rem;
-  line-height: 2;
-  max-width: 680px;
-  margin: 0 auto 30px;
-}
-
-.hero-button {
-  display:
+      background:
+        radial-gradient(circle at 90% 10%, rgba(92, 92, 255, 0.20), transparent 30%),
+        radial

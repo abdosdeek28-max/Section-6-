@@ -3,64 +3,133 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>منصة جروب الجامعة - Section 6</title>
+    <title>منصة جروب الدفعة - Section 6</title>
     <style>
-        body {
-            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-            background-color: #f4f7f6;
+        * {
+            box-sizing: border-box;
             margin: 0;
             padding: 0;
+        }
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background-color: #f0f2f5;
             color: #333;
+            line-height: 1.6;
         }
         header {
-            background-color: #2c3e50;
+            background: linear-gradient(135deg, #1e3c72, #2a5298);
             color: white;
-            padding: 20px;
+            padding: 40px 20px;
             text-align: center;
+            box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+        }
+        header h1 {
+            font-size: 2.5rem;
+            margin-bottom: 10px;
+        }
+        header p {
+            font-size: 1.1rem;
+            opacity: 0.9;
         }
         .container {
-            max-width: 800px;
+            max-width: 1000px;
             margin: 40px auto;
-            background: white;
-            padding: 30px;
-            border-radius: 8px;
-            box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+            padding: 0 20px;
+        }
+        .section-title {
             text-align: center;
+            margin-bottom: 30px;
+            color: #1e3c72;
+            font-size: 1.8rem;
         }
-        h1 {
-            color: #2c3e50;
+        .grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 20px;
         }
-        p {
-            font-size: 18px;
-            line-height: 1.6;
-            color: #555;
+        .card {
+            background: white;
+            border-radius: 12px;
+            padding: 25px;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.05);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            text-align: center;
+            border-top: 5px solid #2a5298;
+        }
+        .card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 8px 25px rgba(0,0,0,0.1);
+        }
+        .card h3 {
+            color: #1e3c72;
+            margin-bottom: 15px;
+            font-size: 1.4rem;
+        }
+        .card p {
+            color: #666;
+            margin-bottom: 20px;
+            font-size: 0.95rem;
         }
         .btn {
             display: inline-block;
-            margin-top: 20px;
             padding: 10px 20px;
-            background-color: #3498db;
+            background-color: #2a5298;
             color: white;
             text-decoration: none;
-            border-radius: 5px;
+            border-radius: 6px;
             font-weight: bold;
+            transition: background-color 0.2s;
         }
         .btn:hover {
-            background-color: #2980b9;
+            background-color: #1e3c72;
+        }
+        footer {
+            text-align: center;
+            padding: 20px;
+            margin-top: 50px;
+            background-color: #fff;
+            color: #777;
+            border-top: 1px solid #ddd;
         }
     </style>
 </head>
 <body>
 
     <header>
-        <h1>منصة جروب الجامعة (Section 6)</h1>
+        <h1>منصة جروب الدفعة (Section 6)</h1>
+        <p>المرجع الأساسي لجميع المحاضرات والملخصات الهندسية</p>
     </header>
 
     <div class="container">
-        لِم شمل الدفعة والمحاضرات والمراجعات
-        <p>مرحباً بك في المنصة الخاصة بنا، المصممة خصيصاً لتكون مرجعاً سهلاً وسريعاً لجميع زملائنا في السكشن.</p>
-        <a href="#" class="btn">قريباً: جدول المحاضرات والملفات</a>
+        <h2 class="section-title">أقسام المواد الدراسية</h2>
+        
+        <div class="grid">
+            <!-- قسم الفيزياء -->
+            <div class="card" style="border-top-color: #e74c3c;">
+                <h3>الفيزياء الهندسية</h3>
+                <p>محاضرات، سكاشن، وملخصات قوانين الفيزياء.</p>
+                <a href="#" class="btn" style="background-color: #e74c3c;">استعرض الملفات</a>
+            </div>
+
+            <!-- قسم الرسم الهندسي -->
+            <div class="card" style="border-top-color: #3498db;">
+                <h3>الرسم الهندسي</h3>
+                <p>لوحات نموذجية، شروحات، وأساسيات الرسم.</p>
+                <a href="#" class="btn" style="background-color: #3498db;">استعرض الملفات</a>
+            </div>
+
+            <!-- قسم الرياضيات -->
+            <div class="card" style="border-top-color: #2ecc71;">
+                <h3>الرياضيات والمهندسين</h3>
+                <p>تمارين محلولة، تفاضل، وتكامل متقدم.</p>
+                <a href="#" class="btn" style="background-color: #2ecc71;">استعرض الملفات</a>
+            </div>
+        </div>
     </div>
+
+    <footer>
+        <p>تم تطوير المنصة بواسطة عبدالرحمن - Section 6 © 2026</p>
+    </footer>
 
 </body>
 </html>

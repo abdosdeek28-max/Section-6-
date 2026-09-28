@@ -1,58 +1,185 @@
-<div class="flex items-center gap-4">
-                    <div class="w-14 h-14 rounded-2xl bg-blue-600 text-white flex items-center justify-center text-2xl shadow-sm group-hover:scale-105 transition-transform">
-                        <i class="fa-solid fa-compass-drafting"></i>
-                    </div>
-                    <div>
-                        <h3 class="text-lg font-bold text-slate-900">Engineering Drawing</h3>
-                        <p class="text-slate-500 text-sm">Plates & Video Guidelines</p>
-                    </div>
-                </div>
-                <a href="https://youtu.be/l9-seuIhwpY?si=zaucVdjxTBwIrC4x" target="_blank" class="inline-flex items-center gap-2 text-slate-700 font-semibold text-sm bg-slate-50 hover:bg-blue-600 hover:text-white px-4 py-2.5 rounded-xl border border-slate-200 transition-colors">
-                    <span>Open subject</span>
-                    <i class="fa-solid fa-arrow-right"></i>
-                </a>
-            </div>
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="theme-color" content="#070b17">
 
-            <!-- Physics Card -->
-            <div class="bg-white border border-slate-200/80 rounded-2xl p-5 shadow-sm hover:shadow-md transition-all duration-200 flex items-center justify-between group">
-                <div class="flex items-center gap-4">
-                    <div class="w-14 h-14 rounded-2xl bg-indigo-900 text-white flex items-center justify-center text-2xl shadow-sm group-hover:scale-105 transition-transform">
-                        <i class="fa-solid fa-atom"></i>
-                    </div>
-                    <div>
-                        <h3 class="text-lg font-bold text-slate-900">Physics</h3>
-                        <p class="text-slate-500 text-sm">Lectures & Resources</p>
-                    </div>
-                </div>
-                <a href="#" class="inline-flex items-center gap-2 text-slate-400 font-semibold text-sm bg-slate-50 px-4 py-2.5 rounded-xl border border-slate-200 cursor-not-allowed">
-                    <span>Soon</span>
-                    <i class="fa-solid fa-clock"></i>
-                </a>
-            </div>
+  <title>منصة الطالب الهندسي | Physics & Engineering</title>
 
-        </div>
+  <!-- Google Font -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
 
-        <!-- Contact & Action Buttons -->
-        <div class="mt-12 flex flex-col sm:flex-row items-center justify-center gap-4">
-            <!-- WhatsApp Button -->
-            <a href="https://wa.me/201003946148" target="_blank" class="w-full sm:w-auto min-w-[260px] inline-flex items-center justify-center gap-3 bg-emerald-500 hover:bg-emerald-600 text-white font-bold py-3.5 px-6 rounded-2xl shadow-md shadow-emerald-500/20 transition-all text-base">
-                <i class="fa-brands fa-whatsapp text-xl"></i>
-                <span>تواصل عبر الواتساب</span>
-            </a>
+  <!-- Font Awesome -->
+  <link rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
 
-            <!-- Email / Suggestion Button -->
-            <a href="mailto:abdosdeek28@gmail.com" class="w-full sm:w-auto min-w-[260px] inline-flex items-center justify-center gap-3 bg-rose-500 hover:bg-rose-600 text-white font-bold py-3.5 px-6 rounded-2xl shadow-md shadow-rose-500/20 transition-all text-base">
-                <i class="fa-solid fa-envelope text-lg"></i>
-                <span>اقتراح عبر الجيميل</span>
-            </a>
-        </div>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
 
-    </main>
+    html {
+      scroll-behavior: smooth;
+    }
 
-    <!-- Footer -->
-    <footer class="bg-white border-t border-slate-200 py-6 text-center text-slate-400 text-sm mt-12">
-        <p>Developed by Eng. Abdelrahman - 2026 &copy; Section 6</p>
-    </footer>
+    body {
+      font-family: "Cairo", sans-serif;
+      background:
+        radial-gradient(circle at 10% 20%, rgba(77, 99, 255, .16), transparent 30%),
+        radial-gradient(circle at 90% 80%, rgba(0, 217, 255, .12), transparent 30%),
+        #070b17;
+      color: #fff;
+      min-height: 100vh;
+      overflow-x: hidden;
+    }
 
-</body>
-</html>
+    /* Background effects */
+    .background {
+      position: fixed;
+      inset: 0;
+      pointer-events: none;
+      z-index: -1;
+      overflow: hidden;
+    }
+
+    .blob {
+      position: absolute;
+      border-radius: 50%;
+      filter: blur(80px);
+      opacity: .25;
+      animation: moveBlob 12s ease-in-out infinite alternate;
+    }
+
+    .blob1 {
+      width: 350px;
+      height: 350px;
+      background: #5b5cff;
+      top: -100px;
+      right: -100px;
+    }
+
+    .blob2 {
+      width: 400px;
+      height: 400px;
+      background: #00d9ff;
+      bottom: -150px;
+      left: -120px;
+      animation-delay: 2s;
+    }
+
+    @keyframes moveBlob {
+      from {
+        transform: translate(0, 0) scale(1);
+      }
+
+      to {
+        transform: translate(40px, 50px) scale(1.15);
+      }
+    }
+
+    /* Navbar */
+    nav {
+      width: 100%;
+      position: sticky;
+      top: 0;
+      z-index: 100;
+      backdrop-filter: blur(18px);
+      -webkit-backdrop-filter: blur(18px);
+      background: rgba(7, 11, 23, .65);
+      border-bottom: 1px solid rgba(255, 255, 255, .08);
+    }
+
+    .nav-container {
+      width: min(1150px, 92%);
+      margin: auto;
+      min-height: 72px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 20px;
+    }
+
+    .logo {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      font-weight: 900;
+      font-size: 1.15rem;
+    }
+
+    .logo-icon {
+      width: 43px;
+      height: 43px;
+      display: grid;
+      place-items: center;
+      border-radius: 13px;
+      background: linear-gradient(135deg, #5b5cff, #00d9ff);
+      box-shadow: 0 0 25px rgba(65, 142, 255, .35);
+    }
+
+    .nav-link {
+      text-decoration: none;
+      color: #c9d0e3;
+      font-weight: 600;
+      transition: .3s;
+    }
+
+    .nav-link:hover {
+      color: #fff;
+    }
+
+    /* Hero */
+    .hero {
+      width: min(1150px, 92%);
+      margin: auto;
+      min-height: 520px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+      padding: 80px 0 55px;
+    }
+
+    .hero-content {
+      max-width: 850px;
+    }
+
+    .badge {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      padding: 8px 17px;
+      border-radius: 100px;
+      background: rgba(91, 92, 255, .12);
+      border: 1px solid rgba(112, 129, 255, .3);
+      color: #bfc8ff;
+      font-size: .9rem;
+      margin-bottom: 25px;
+    }
+
+    .hero h1 {
+      font-size: clamp(2.3rem, 7vw, 5rem);
+      line-height: 1.2;
+      font-weight: 900;
+      margin-bottom: 20px;
+    }
+
+    .gradient-text {
+      background: linear-gradient(90deg, #9b9cff, #4ddfff, #87f5cf);
+      -webkit-background-clip: text;
+      background-clip: text;
+      color: transparent;
+    }
+
+    .hero p {
+      color: #9fa8bf;
+      font-size: clamp(1rem, 2vw, 1.18rem);
+      line-height: 2;
+      max-width: 680px;
+      margin: 0 auto 32px;
+    }

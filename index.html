@@ -1,231 +1,93 @@
-<!DOCTYPE html>
-<html lang="ar" dir="rtl">
+.subject-btn {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
 
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-  <title>منصة الطالب الهندسي</title>
-
-  <style>
-    * {
-      box-sizing: border-box;
-      margin: 0;
-      padding: 0;
-    }
-
-    body {
-      font-family: Arial, Tahoma, sans-serif;
-      background-color: #071426;
-      color: white;
-      min-height: 100vh;
-    }
-
-    header {
-      background-color: #0d2038;
-      padding: 20px;
-      text-align: center;
-      border-bottom: 1px solid #1d3b5e;
-    }
-
-    header h2 {
-      color: white;
-      font-size: 24px;
-    }
-
-    .hero {
-      text-align: center;
-      padding: 70px 20px 50px;
-    }
-
-    .hero h1 {
-      font-size: 45px;
-      margin-bottom: 15px;
-      color: #ffffff;
-    }
-
-    .hero h1 span {
-      color: #3bdcff;
-    }
-
-    .hero p {
-      color: #b8c7da;
-      font-size: 18px;
-      line-height: 1.8;
-    }
-
-    .container {
-      width: 90%;
-      max-width: 1000px;
-      margin: auto;
-      padding-bottom: 60px;
-    }
-
-    .title {
-      text-align: center;
-      margin-bottom: 30px;
-    }
-
-    .title h2 {
-      font-size: 30px;
-      margin-bottom: 8px;
-    }
-
-    .title p {
-      color: #9eb0c5;
-    }
-
-    .cards {
-      display: grid;
-      grid-template-columns: repeat(2, 1fr);
-      gap: 20px;
-    }
-
-    .card {
-      background-color: #10243d;
-      border: 1px solid #244767;
-      border-radius: 15px;
-      padding: 25px;
-    }
-
-    .icon {
-      font-size: 45px;
-      margin-bottom: 15px;
-    }
-
-    .card h3 {
-      font-size: 23px;
-      margin-bottom: 10px;
-    }
-
-    .card p {
-      color: #aec0d2;
-      margin-bottom: 20px;
-      line-height: 1.7;
-    }
-
-    .button {
-      display: block;
       width: 100%;
-      background-color: #246bfd;
+
+      background: #176bff;
       color: white;
+
       text-decoration: none;
-      text-align: center;
-      padding: 13px;
-      border-radius: 8px;
+
+      padding: 14px 17px;
+
+      border-radius: 10px;
+
       font-weight: bold;
+
+      transition: 0.3s;
     }
 
-    .button:hover {
-      background-color: #1457da;
+    .subject-btn:hover {
+      background: #3982ff;
     }
 
-    .drawing-button {
-      background-color: #e04444;
+    .youtube-btn {
+      background: #d83232;
     }
 
-    .drawing-button:hover {
-      background-color: #c63333;
+    .youtube-btn:hover {
+      background: #ef4141;
     }
+
+    /* ===== CONTACT ===== */
 
     .contact {
-      width: 90%;
-      max-width: 1000px;
-      margin: 0 auto 50px;
-      background-color: #103322;
-      border: 1px solid #1c7043;
-      border-radius: 15px;
-      padding: 30px;
-      text-align: center;
+      width: 92%;
+      max-width: 1100px;
+
+      margin: 0 auto 80px;
+
+      background: #0e3023;
+
+      border: 1px solid #1d6844;
+
+      border-radius: 20px;
+
+      padding: 32px;
+    }
+
+    .contact-content {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+
+      gap: 25px;
+    }
+
+    .contact-info {
+      display: flex;
+      align-items: center;
+
+      gap: 18px;
+    }
+
+    .whatsapp-icon {
+      width: 65px;
+      height: 65px;
+
+      display: flex;
+      align-items: center;
+      justify-content: center;
+
+      flex-shrink: 0;
+
+      background: #145134;
+
+      border-radius: 17px;
+
+      font-size: 34px;
     }
 
     .contact h2 {
-      margin-bottom: 10px;
+      margin-bottom: 6px;
     }
 
     .contact p {
-      color: #b5c9bd;
-      margin-bottom: 20px;
+      color: #9bb8a8;
     }
 
-    .whatsapp {
-      display: inline-block;
-      background-color: #25d366;
-      color: #052b13;
-      text-decoration: none;
-      padding: 14px 25px;
-      border-radius: 8px;
-      font-weight: bold;
-    }
-
-    footer {
-      background-color: #08182b;
-      border-top: 1px solid #183550;
-      text-align: center;
-      padding: 25px;
-      color: #8499ad;
-    }
-
-    @media (max-width: 700px) {
-      .cards {
-        grid-template-columns: 1fr;
-      }
-
-      .hero h1 {
-        font-size: 34px;
-      }
-
-      .hero {
-        padding-top: 50px;
-      }
-    }
-  </style>
-</head>
-
-<body>
-
-  <header>
-    <h2>🎓 منصة الطالب الهندسي</h2>
-  </header>
-
-
-  <section class="hero">
-
-    <h1>
-      أهلاً بيك في
-      <span>منصتك الدراسية</span>
-    </h1>
-
-    <p>
-      كل المواد والمصادر اللي محتاجها في مكان واحد
-    </p>
-
-  </section>
-
-
-  <main class="container">
-
-    <div class="title">
-      <h2>📚 المواد الدراسية</h2>
-      <p>اختر المادة للوصول إلى المحتوى</p>
-    </div>
-
-
-    <div class="cards">
-
-
-      <!-- الفيزياء -->
-
-      <div class="card">
-
-        <div class="icon">⚛️</div>
-
-        <h3>الفيزياء</h3>
-
-        <p>
-          ملفات ومصادر مادة الفيزياء للمذاكرة والمراجعة.
-        </p>
-
-        <a
-          class="button"
-          href="https://
+    .whatsapp-btn {
+      background: #25d366;
+      color: #042511

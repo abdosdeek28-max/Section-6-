@@ -4,45 +4,228 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="theme-color" content="#060816">
 
   <title>منصة الطالب الهندسي</title>
 
   <style>
-    @import url('https://fonts.googleapis.com/css2?family=Cairo:wght@400;600;700;800;900&display=swap');
-
     * {
+      box-sizing: border-box;
       margin: 0;
       padding: 0;
-      box-sizing: border-box;
-    }
-
-    html {
-      scroll-behavior: smooth;
     }
 
     body {
-      font-family: "Cairo", Arial, sans-serif;
-      background: #060816;
-      color: #ffffff;
+      font-family: Arial, Tahoma, sans-serif;
+      background-color: #071426;
+      color: white;
       min-height: 100vh;
-      overflow-x: hidden;
     }
 
-    a {
+    header {
+      background-color: #0d2038;
+      padding: 20px;
+      text-align: center;
+      border-bottom: 1px solid #1d3b5e;
+    }
+
+    header h2 {
+      color: white;
+      font-size: 24px;
+    }
+
+    .hero {
+      text-align: center;
+      padding: 70px 20px 50px;
+    }
+
+    .hero h1 {
+      font-size: 45px;
+      margin-bottom: 15px;
+      color: #ffffff;
+    }
+
+    .hero h1 span {
+      color: #3bdcff;
+    }
+
+    .hero p {
+      color: #b8c7da;
+      font-size: 18px;
+      line-height: 1.8;
+    }
+
+    .container {
+      width: 90%;
+      max-width: 1000px;
+      margin: auto;
+      padding-bottom: 60px;
+    }
+
+    .title {
+      text-align: center;
+      margin-bottom: 30px;
+    }
+
+    .title h2 {
+      font-size: 30px;
+      margin-bottom: 8px;
+    }
+
+    .title p {
+      color: #9eb0c5;
+    }
+
+    .cards {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 20px;
+    }
+
+    .card {
+      background-color: #10243d;
+      border: 1px solid #244767;
+      border-radius: 15px;
+      padding: 25px;
+    }
+
+    .icon {
+      font-size: 45px;
+      margin-bottom: 15px;
+    }
+
+    .card h3 {
+      font-size: 23px;
+      margin-bottom: 10px;
+    }
+
+    .card p {
+      color: #aec0d2;
+      margin-bottom: 20px;
+      line-height: 1.7;
+    }
+
+    .button {
+      display: block;
+      width: 100%;
+      background-color: #246bfd;
+      color: white;
       text-decoration: none;
+      text-align: center;
+      padding: 13px;
+      border-radius: 8px;
+      font-weight: bold;
     }
 
-    /* =========================
-       BACKGROUND
-    ========================= */
+    .button:hover {
+      background-color: #1457da;
+    }
 
-    body::before {
-      content: "";
-      position: fixed;
-      inset: 0;
-      z-index: -2;
+    .drawing-button {
+      background-color: #e04444;
+    }
 
-      background:
-        radial-gradient(circle at 90% 10%, rgba(92, 92, 255, 0.20), transparent 30%),
-        radial
+    .drawing-button:hover {
+      background-color: #c63333;
+    }
+
+    .contact {
+      width: 90%;
+      max-width: 1000px;
+      margin: 0 auto 50px;
+      background-color: #103322;
+      border: 1px solid #1c7043;
+      border-radius: 15px;
+      padding: 30px;
+      text-align: center;
+    }
+
+    .contact h2 {
+      margin-bottom: 10px;
+    }
+
+    .contact p {
+      color: #b5c9bd;
+      margin-bottom: 20px;
+    }
+
+    .whatsapp {
+      display: inline-block;
+      background-color: #25d366;
+      color: #052b13;
+      text-decoration: none;
+      padding: 14px 25px;
+      border-radius: 8px;
+      font-weight: bold;
+    }
+
+    footer {
+      background-color: #08182b;
+      border-top: 1px solid #183550;
+      text-align: center;
+      padding: 25px;
+      color: #8499ad;
+    }
+
+    @media (max-width: 700px) {
+      .cards {
+        grid-template-columns: 1fr;
+      }
+
+      .hero h1 {
+        font-size: 34px;
+      }
+
+      .hero {
+        padding-top: 50px;
+      }
+    }
+  </style>
+</head>
+
+<body>
+
+  <header>
+    <h2>🎓 منصة الطالب الهندسي</h2>
+  </header>
+
+
+  <section class="hero">
+
+    <h1>
+      أهلاً بيك في
+      <span>منصتك الدراسية</span>
+    </h1>
+
+    <p>
+      كل المواد والمصادر اللي محتاجها في مكان واحد
+    </p>
+
+  </section>
+
+
+  <main class="container">
+
+    <div class="title">
+      <h2>📚 المواد الدراسية</h2>
+      <p>اختر المادة للوصول إلى المحتوى</p>
+    </div>
+
+
+    <div class="cards">
+
+
+      <!-- الفيزياء -->
+
+      <div class="card">
+
+        <div class="icon">⚛️</div>
+
+        <h3>الفيزياء</h3>
+
+        <p>
+          ملفات ومصادر مادة الفيزياء للمذاكرة والمراجعة.
+        </p>
+
+        <a
+          class="button"
+          href="https://
